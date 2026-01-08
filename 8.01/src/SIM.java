@@ -1,17 +1,13 @@
 public class SIM {
-    private static int nChiamate = 0;
+    private int nChiamate = Chiamate.getnChiamate();
     private long num;
     private double saldo;
 
 
-    public SIM(long num, double saldo, int nChiamate) {
+    public SIM(long num, double saldo) {
         this.num = num;
         this.saldo = saldo;
         this.nChiamate = nChiamate;
-    }
-
-    public static int incrChiamate() {
-        return nChiamate++;
     }
 
     public long getNum() {
@@ -31,7 +27,7 @@ public class SIM {
     }
 
     public void setnChiamate(int nChiamate) {
-        this.nChiamate = nChiamate;
+        this.nChiamate = nChiamate++;
     }
 
 
